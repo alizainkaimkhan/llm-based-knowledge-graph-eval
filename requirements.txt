@@ -1,0 +1,20 @@
+# Data Manipulation
+pandas
+numpy
+
+# Graph and Topological Analysis
+networkx
+
+# Visualization
+matplotlib
+seaborn
+
+# Machine Learning Metrics
+scikit-learn
+
+# LLM Inference
+vllm
+openai
+
+# Environment Management (Recommended)
+python-dotenv
