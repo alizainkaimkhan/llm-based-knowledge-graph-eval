@@ -3,13 +3,13 @@
 
 This repository contains the source code, datasets, and experimental configurations for evaluating the capability of Large Language Models (LLMs) to validate and refine Knowledge Graphs (KGs). The study focuses on two benchmark datasets: **FB15k-237** (real-world facts) and **WN18RR** (lexical semantics).
 
-## 🚀 Key Contributions
+## Key Contributions
 * **Relation-Aware Corruption Engine:** A custom pipeline to generate semantically plausible "type-safe" negative samples.
 * **Multi-Strategy Prompting:** Evaluation across four strategies (S1–S4), including Zero-Shot, Few-Shot, Chain-of-Thought, and **Expert Persona** role-play (S4).
 * **Failure Taxonomy:** A classification of LLM errors including Ontological Over-Generalization, Plausibility Traps, Structural Skepticism, and Semantic Ambiguity.
 * **Topological Analysis:** Measuring how LLM-driven graph pruning reshapes network density and connectivity to mitigate "embedding pollution."
 
-## 📂 Repository Structure
+## Repository Structure
 ```text
 ├── data/                   # Raw input (.tsv, .txt) and intermediate (.csv) data
 ├── scripts/                # Python processing and evaluation logic
@@ -29,10 +29,10 @@ This repository contains the source code, datasets, and experimental configurati
 └── README.md               # Project documentation
 ```
 
-## 🛠️ Setup & Installation
+## Setup & Installation
 1. Clone the repository:
    
-   git clone https://github.com/alizainkaimkhan/llm-kg-evaluation-project.git
+   git clone https://github.com/alizainkaimkhan/llm-based-knowledge-graph-eval.git
    cd llm-kg-evaluation-project
    
 2. Install dependencies:
@@ -40,7 +40,7 @@ This repository contains the source code, datasets, and experimental configurati
    pip install -r requirements.txt
    
 
-## 💻 How to Run
+## How to Run
 
 ### 1. Data Preparation Pipeline
 Run these scripts from the project root to generate the evaluation set:
@@ -68,13 +68,13 @@ Generate final F1-score heatmaps, radar charts and confusion matrices:
 python scripts/plots.py
 
 
-## 🔮 Future Work
+## Future Work
 * **Supervised Fine-Tuning (SFT):** Training models specifically for graph-judgment tasks.
 * **Agentic Multi-Model Consensus:** Collaborative auditing between Llama and GPT.
 * **Knowledge Graph of Thoughts (KGoT):** Externalizing LLM reasoning into dynamic graph structures.
 * **Interactive Refinement:** Human-in-the-loop safeguards and semantic filtering.
 
-## 👥 Contributors & Affiliation
+## Contributors & Affiliation
 * **Ali Zain Kaim Khan**
 * **Rafia Fayyaz**
 * **Zeeshan Akram**
