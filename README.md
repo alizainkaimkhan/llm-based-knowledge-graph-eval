@@ -32,41 +32,60 @@ This repository contains the source code, datasets, and experimental configurati
 ## Setup & Installation
 1. Clone the repository:
    
+   ```bash
    git clone https://github.com/alizainkaimkhan/llm-based-knowledge-graph-eval.git
-   cd llm-kg-evaluation-project
+   cd llm-based-knowledge-graph-eval
+   ```
    
 2. Install dependencies:
    
+   ```bash
    pip install -r requirements.txt
+   ```
    
-
 ## How to Run
 
 ### 1. Data Preparation Pipeline
 Run these scripts from the project root to generate the evaluation set:
 
+```bash
 python scripts/sampling.py
 python scripts/corruption.py
 python scripts/mapping.py
-
+```
 
 ### 2. LLM Inference
 #### **Remote Execution (LARCC Cluster)**
 Submit the job to the GPU partition for Llama-3-70B inference:
 
+```bash
 sbatch slurm/llama_inf.slurm
-
+```
 
 #### **Local Execution (macOS / Linux / Windows)**
-Use the wrappers for GPT-5.4 mini inference. **Note:** Export OPENAI_API_KEY in your shell before running (export OPENAI_API_KEY=... on macOS/Linux, set OPENAI_API_KEY=... on Windows).
-* **macOS/Linux:** chmod +x run_gpt.sh && ./run_gpt.sh
-* **Windows:** Double-click run_gpt.bat
+Use the wrappers for GPT-5.4-mini inference. **Note:** Export `OPENAI_API_KEY` in your shell before running.
+
+**macOS/Linux:**
+
+```bash
+export OPENAI_API_KEY="..."
+chmod +x run_gpt.sh
+./run_gpt.sh
+```
+
+**Windows (Command Prompt):**
+
+```bat
+set OPENAI_API_KEY=...
+run_gpt.bat
+```
 
 ### 3. Analysis & Visualization
 Generate final F1-score heatmaps, radar charts and confusion matrices:
 
+```bash
 python scripts/plots.py
-
+```
 
 ## Future Work
 * **Supervised Fine-Tuning (SFT):** Training models specifically for graph-judgment tasks.
