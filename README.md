@@ -58,7 +58,7 @@ sbatch slurm/llama_inf.slurm
 
 
 #### **Local Execution (macOS / Linux / Windows)**
-Use the wrappers for GPT-5.4 mini inference. **Note:** Ensure your `OPENAI_API_KEY` is set inside the script.
+Use the wrappers for GPT-5.4 mini inference. **Note:** Export OPENAI_API_KEY in your shell before running (export OPENAI_API_KEY=... on macOS/Linux, set OPENAI_API_KEY=... on Windows).
 * **macOS/Linux:** chmod +x run_gpt.sh && ./run_gpt.sh
 * **Windows:** Double-click run_gpt.bat
 
