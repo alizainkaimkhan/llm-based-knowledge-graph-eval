@@ -46,7 +46,7 @@ This repository contains the source code, datasets, and experimental configurati
 ## How to Run
 
 ### 1. Data Preparation Pipeline
-Run these scripts from the project root to generate the evaluation set:
+Run these scripts from the project root to generate the evaluation set in `data/`:
 
 ```bash
 python scripts/sampling.py
@@ -56,14 +56,14 @@ python scripts/mapping.py
 
 ### 2. LLM Inference
 #### **Remote Execution (LARCC Cluster)**
-Submit the job to the GPU partition for Llama-3-70B inference:
+Submit `llama_inf.slurm` to the GPU partition for Llama-3-70B inference:
 
 ```bash
 sbatch slurm/llama_inf.slurm
 ```
 
 #### **Local Execution (macOS / Linux / Windows)**
-Use the wrappers for GPT-5.4-mini inference. **Note:** Export `OPENAI_API_KEY` in your shell before running.
+Use the wrapper scripts `run_gpt.sh` (macOS/Linux) or `run_gpt.bat` (Windows) for GPT-5.4-mini inference. **Note:** Export `OPENAI_API_KEY` in your shell before running.
 
 **macOS/Linux:**
 
@@ -81,7 +81,7 @@ run_gpt.bat
 ```
 
 ### 3. Analysis & Visualization
-Generate final F1-score heatmaps, radar charts and confusion matrices:
+Run `plots.py` to generate the final F1-score heatmaps, radar charts and confusion matrices in `results/`:
 
 ```bash
 python scripts/plots.py
