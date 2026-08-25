@@ -138,3 +138,6 @@ python scripts/plots.py
 * **Rafia Fayyaz**
 * **Zeeshan Akram**
 * **Course:** CSE 694: Deep Learning on Graphs — Spring 2026, University of Louisville
+
+## Acknowledgments
+The authors acknowledge the **Louisville Academic Research Compute Cluster (LARCC)** at the University of Louisville for providing the computational resources used in this research. This work was made possible, in part, by the Advanced Computing Core at the University of Louisville.
